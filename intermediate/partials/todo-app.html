@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../style.css" />
+		<link rel="stylesheet" href="../css/todo-app.css" />
+		<title>To Do App</title>
+	</head>
+	<body>
+		<h1>To Do App</h1>
+		<div class="container" id="container">
+			<div class="task-column">
+				<p class="task-title">New Tasks</p>
+				<ul class="tasks-list" id="new-tasks"></ul>
+			</div>
+			<div class="task-column">
+				<p class="task-title">In Progress</p>
+				<ul class="tasks-list" id="in-progress"></ul>
+			</div>
+			<div class="task-column">
+				<p class="task-title">Completed Tasks</p>
+				<ul class="tasks-list" id="completed"></ul>
+			</div>
+			<div class="add-button" data-modal-open>
+				<button class="add">
+					<svg src="" width="24" height="24">
+						<use href="../icons/symbol-defs.svg#icon-plus"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="backdrop is-hidden" data-modal>
+			<div class="modal">
+				<p class="modal-title">Add Task</p>
+				<form action="" class="form">
+					<label class="modal-form-label" for="name">
+						<span class="modal-form-label-text">Name</span>
+					</label>
+					<input
+						type="text"
+						class="task-name"
+						id="name"
+						required
+						autocomplete="off"
+					/>
+					<label class="modal-form-label" for="descr">
+						<span class="modal-form-label-text">Description</span>
+					</label>
+					<textarea
+						maxlength="60"
+						type="text"
+						class="task-descr"
+						id="descr"
+					></textarea>
+					<div>
+						<div id="the-count">
+							<span id="current">0</span>
+							<span id="maximum">/60</span>
+						</div>
+					</div>
+					<div class="bnt-wrapper">
+						<button type="submit" class="form-btn" id="add-btn">Add</button
+						><button type="button" class="form-btn cancel" data-modal-close>
+							Cancel
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script type="module" src="../src/js/todo-app.js"></script>
+		<script type="module" src="../src/js/modal.js"></script>
+	</body>
+</html>
