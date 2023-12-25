@@ -1,0 +1,8 @@
+.task-btns-list {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+.task-btn {
+	font-size: 14px;
+}

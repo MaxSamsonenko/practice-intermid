@@ -1,0 +1,13 @@
+.header-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.login-btn {
+	margin-left: auto;
+	background-color: #ffffff;
+	outline: none;
+	border: 1px solid black;
+	border-radius: 6px;
+	padding: 3px 8px;
+}

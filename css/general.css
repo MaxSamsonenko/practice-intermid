@@ -1,0 +1,41 @@
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.section {
+	padding-top: 20px;
+}
+
+.container {
+	width: 100%;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+.main-container {
+	position: relative;
+}
+
+@media screen and (min-width: 375px) {
+	.container {
+		width: 375px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		width: 768px;
+		padding: 0 32px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.container {
+		width: 1440px;
+	}
+}

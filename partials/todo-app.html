@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+			integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="../style.css" />
+		<link rel="stylesheet" href="../css/todo-app/todo-app.css" />
+		<title>To Do App</title>
+	</head>
+	<body>
+		<section class="section">
+			<header>
+				<div class="container header-container">
+					<a href="#" class="logo">To Do App</a>
+					<button type="button" class="login-btn">Log in</button>
+				</div>
+			</header>
+		</section>
+		<main>
+			<section class="section">
+				<div class="container main-container">
+					<ul class="task-btns-list">
+						<li class="task-btns-list-item">
+							<button type="button" id="newtask" class="task-btn">
+								New Tasks
+							</button>
+							<ul class="task-cards-list active-card-list" id="cards-new"></ul>
+						</li>
+						<li class="task-btns-list-item">
+							<button type="button" id="inprogress" class="task-btn">
+								In Progress
+							</button>
+							<ul class="task-cards-list" id="cards-inprogress"></ul>
+						</li>
+						<li class="task-btns-list-item">
+							<button type="button" id="completed" class="task-btn">
+								Completed
+							</button>
+							<ul class="task-cards-list" id="cards-completed"></ul>
+						</li>
+					</ul>
+					<div class="add-button-container" data-modal-open>
+						<button class="add-button">
+							<svg class="add-button-icon" width="24" height="24">
+								<use href="../icons/symbol-defs.svg#icon-folder-plus"></use>
+							</svg>
+						</button>
+						<div class="add-button-popup-wrapper">
+							<span class="add-button-popup">Add new task</span>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<div class="backdrop is-hidden" data-modal>
+			<div class="modal">
+				<p class="modal-title">Add Task</p>
+				<form action="" class="form">
+					<label class="modal-form-label" for="descr">
+						<span class="modal-form-label-text">Description</span>
+					</label>
+					<textarea
+						maxlength="100"
+						type="text"
+						class="task-descr"
+						id="descr"
+					></textarea>
+					<div>
+						<div id="the-count">
+							<span id="current">0</span>
+							<span id="maximum">/100</span>
+						</div>
+					</div>
+					<div class="bnt-wrapper">
+						<button type="submit" class="form-btn" id="add-btn">Add</button
+						><button type="button" class="form-btn cancel" data-modal-close>
+							Cancel
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script type="module" src="../src/js/todo-app.js"></script>
+		<script type="module" src="../src/js/modal.js"></script>
+	</body>
+</html>

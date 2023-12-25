@@ -1,0 +1,13 @@
+@import url("../general.css");
+@import url("./variables.css");
+@import url("./todo-styles/add-btn.css");
+@import url("./todo-styles/modal.css");
+@import url("./todo-styles/header.css");
+@import url("./todo-styles/task-btns-list.css");
+@import url("./todo-styles/task-card.css");
+
+/* ===================================================MAIN====================================== */
+.main-container {
+	position: relative;
+	height: 100vh;
+}

@@ -10,5 +10,7 @@
 
 	function toggleModal() {
 		refs.modal.classList.toggle("is-hidden");
+		document.querySelector(".form").reset();
+		document.getElementById("current").innerHTML = 0;
 	}
 })();

@@ -1,0 +1,107 @@
+.task-cards-list {
+	position: absolute;
+	top: 35px;
+	left: 0;
+	display: none;
+	width: 100%;
+	height: 100vh;
+	overflow: auto;
+}
+.active-card-list {
+	display: block;
+}
+.task-card {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid var(--new-task-border-clr);
+	border-radius: 5px;
+	margin-bottom: 10px;
+	background-color: #fff;
+}
+.task-card-btns-container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.task-card-count {
+	font-weight: 700;
+}
+.card-btns {
+	display: flex;
+	gap: 5px;
+	margin-left: auto;
+}
+.card-btn {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+.task-card-descr {
+	font-size: 20px;
+	color: var(--new-task-border-clr);
+	margin-bottom: 10px;
+}
+.task-card-date-container {
+	display: flex;
+}
+.task-card-date {
+	font-size: 12px;
+	font-style: italic;
+}
+.task-card-subtitle {
+	font-size: 12px;
+	font-style: italic;
+	margin-left: auto;
+}
+#btn-delete:hover::after {
+	content: "delete";
+	position: absolute;
+	bottom: -20px;
+	left: -14px;
+	width: 202%;
+	border-radius: 5px;
+	border: 1px solid #212121;
+	height: 18px;
+	font-size: 13px;
+	background-color: #fff;
+	z-index: 2;
+}
+#btn-delete:hover > svg {
+	fill: var(--card-btn-delete-color);
+}
+#btn-edit:hover::after {
+	content: "edit";
+	position: absolute;
+	bottom: -20px;
+	left: -14px;
+	width: 202%;
+	border-radius: 5px;
+	border: 1px solid #212121;
+	height: 18px;
+	font-size: 13px;
+	background-color: #fff;
+	z-index: 2;
+}
+#btn-edit:hover > svg {
+	fill: var(--card-btn-edit-color);
+}
+#btn-start:hover::after {
+	content: "start";
+	position: absolute;
+	bottom: -20px;
+	left: -14px;
+	width: 188%;
+	border-radius: 5px;
+	border: 1px solid #212121;
+	height: 18px;
+	font-size: 13px;
+	background-color: #fff;
+	z-index: 2;
+}
+#btn-start:hover > svg {
+	fill: var(--card-btn-start-color);
+}
